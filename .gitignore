@@ -2,3 +2,8 @@
 .next
 pnpm-lock.yaml
 yarn.lock
+
+# env files
+.env
+.env.local
+.env*.local

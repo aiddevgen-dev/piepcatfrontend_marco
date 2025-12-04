@@ -30,7 +30,7 @@ export function usePipecat() {
   const connect = useCallback(async (assistantId = "assistant_groq_whisper") => {
     try {
       setError(null)
-      const baseUrl = process.env.NEXT_PUBLIC_RTVI_URL || "http://localhost:7860"
+      const baseUrl = process.env.NEXT_PUBLIC_RTVI_URL || "https://75c772eb0aba.ngrok-free.app"
 
       const config: PipecatClientOptions = {
         transport: new WebSocketTransport(),
