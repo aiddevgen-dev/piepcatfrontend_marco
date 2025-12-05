@@ -40,7 +40,7 @@ export default function SignupPage() {
                 return
             }
 
-            window.location.href = "/login"
+            window.location.href = "/login?message=check-email"
         } catch (err) {
             setError("Something went wrong")
         } finally {
