@@ -31,6 +31,10 @@ const handler = NextAuth({
                     return null
                 }
 
+                if (!user.verified) {
+                    throw new Error("email-not-verified")
+                }
+
                 const isValid = await bcrypt.compare(credentials.password, user.password)
 
                 if (!isValid) {
